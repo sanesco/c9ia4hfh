@@ -21,9 +21,9 @@ class RoomsController < ApplicationController
   end
 
   def update
-    @room = Product.find(params[:id])
-    if @room.update(product_params)
-      redirect_to products_path, notice: "La habitación se modificó con éxito"
+    @room = Room.find(params[:id])
+    if @room.update(room_params)
+      redirect_to rooms_path, notice: "La habitación se modificó con éxito"
     else
       render :edit
     end
